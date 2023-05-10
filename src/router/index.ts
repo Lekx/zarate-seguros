@@ -20,24 +20,19 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '@/views/AboutPage.vue'),
       },
       {
-        path: '/aseguradoras',
+        path: '/seguros',
         name: 'Insurances',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/InsurancesPage.vue'),
-      },
-      {
-        path: '/productos',
-        name: 'Products',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/ProductsPage.vue'),
+        component: () => import(/* webpackChunkName: "insurances" */ '@/views/InsurancesPage.vue'),
       },
       {
         path: '/atencion-empresas',
         name: 'Companies',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/CompaniesPage.vue'),
+        component: () => import(/* webpackChunkName: "companies" */ '@/views/CompaniesPage.vue'),
       },
       {
         path: '/contacto',
         name: 'Contact',
-        component: () => import(/* webpackChunkName: "about" */ '@/views/ContactPage.vue'),
+        component: () => import(/* webpackChunkName: "contact" */ '@/views/ContactPage.vue'),
       }
     ],
   },

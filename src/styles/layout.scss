@@ -1,10 +1,13 @@
 @import "./variables.scss";
 
 .logo-link{
-    color: inherit;
+    color: $brand-burnt-sienna;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
     &:hover{
-        color: blue;
+        text-decoration: underline;
     }
 }
 
