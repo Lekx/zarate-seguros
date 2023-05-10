@@ -52,10 +52,8 @@ const state = reactive({
 });
 const title = 'Zárate Seguros';
 const menuItems = [
-    { title: 'Inicio', path: '/', icon: 'mdi-home-outline'},
     { title: 'Nosotros', path: '/nosotros', icon: 'mdi-compass-outline'},
-    { title: 'Aseguradoras', path: '/aseguradoras', icon: 'mdi-security'},
-    { title: 'Productos', path: '/productos', icon: 'mdi-hexagon-multiple'},
+    { title: 'Seguros', path: '/seguros', icon: 'mdi-security'},
     { title: 'Atención a empresas', path: '/atencion-empresas', icon: 'mdi-briefcase-check'},
     { title: 'Contacto', path: '/contacto', icon: 'mdi-email'}
 ];

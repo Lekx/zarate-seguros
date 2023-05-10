@@ -1,5 +1,5 @@
 <template>
-    <p>Aseguradoras</p>    
+    <p>Aseguradoras y productos(removed)</p>    
 </template>
 
 <script lang="ts" setup></script>
