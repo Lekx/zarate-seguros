@@ -1,11 +1,14 @@
 <template>
-  <v-app>
-    <v-main>
-      <HelloWorld />
-    </v-main>
-  </v-app>
+    <v-app>
+        <TheHeader/>
+        <v-content>
+            <router-view></router-view>
+        </v-content>
+        <TheFooter/>
+    </v-app>
 </template>
 
 <script setup lang="ts">
-  import HelloWorld from '@/components/HelloWorld.vue'
+import TheHeader from '@/components/TheHeader.vue';
+import TheFooter from '@/components/TheFooter.vue';
 </script>
