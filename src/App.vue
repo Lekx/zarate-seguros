@@ -2,7 +2,9 @@
     <v-app>
         <TheHeader/>
         <v-content>
-            <router-view></router-view>
+            <v-container>
+                <router-view></router-view>
+            </v-container>
         </v-content>
         <TheFooter/>
     </v-app>
@@ -12,3 +14,7 @@
 import TheHeader from '@/components/TheHeader.vue';
 import TheFooter from '@/components/TheFooter.vue';
 </script>
+
+<style lang="scss">
+@import "@/styles/layout.scss";
+</style>
