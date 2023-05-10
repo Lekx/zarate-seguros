@@ -64,5 +64,5 @@ const products = [
 ]
 </script>
 <style lang="scss">
-@import "@/styles/home.scss";
+@import "@/styles/home-section.scss";
 </style>

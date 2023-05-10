@@ -6,6 +6,7 @@
     flex-direction: column;
     padding-bottom: 250px;
     margin: 40px auto;
+    color: $brand-charcoal;
     h1{
         font-size: 2rem;
         text-align: center;
@@ -13,5 +14,8 @@
     p{
         font-size: 1.5rem;
         margin: 20px 0;
+    }
+    >div{
+     margin-bottom: 40px;
     }
 }
