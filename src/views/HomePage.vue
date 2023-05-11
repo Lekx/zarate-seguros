@@ -63,6 +63,6 @@ const products = [
     {text: 'Seguros de auto', icon: 'mdi-van-passenger'}
 ]
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/home-section.scss";
 </style>

@@ -109,6 +109,6 @@ const insurances = [
     {imgUrl: new URL('/src/assets/aseguradoras/afirme.png', import.meta.url), alt: 'AFIRME'}
 ];
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/insurances-section.scss";
 </style>

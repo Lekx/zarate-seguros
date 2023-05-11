@@ -85,6 +85,6 @@ const insurances = {
     ]
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/styles/companies-section.scss";
 </style>
