@@ -3,70 +3,75 @@
         <v-row>
             <v-col cols="12">
                 <h1>
-                    Contactanos
+                    ¡Haznos una pregunta!
                 </h1>
             </v-col>
-            <v-col cols="8">
-                <v-form v-model="state.validForm">
+            <v-col cols="7">
+                <v-form v-model="state.validForm" @submit.prevent="submitForm">
                     <v-row>
                         <v-col cols="12">
                             <h3>Dejanos tus datos y te contactamos:</h3>
                         </v-col>
-                        <v-col cols="12" md="5">
+                        <v-col cols="12" md="6">
                             <v-text-field
                                 v-model="state.contactForm.name"
-                                :counter="10"
+                                :rules="[requiredValidation]"
                                 label="Nombre"
                                 required
                             ></v-text-field>
                         </v-col>
-                        <v-col cols="12" md="5">
+                        <v-col cols="12" md="6">
                             <v-text-field
                                 v-model="state.contactForm.phone"
-                                :counter="10"
+                                :rules="phoneValidation"
+                                counter="10"
+                                maxlength="10"
                                 label="Teléfono"
                             ></v-text-field>
                         </v-col>
-                        <v-col cols="12" md="5">
+                        <v-col cols="12" md="6">
                             <v-text-field
                                 v-model="state.contactForm.company"
                                 label="Compañía"
                             ></v-text-field>
                         </v-col>
-                        <v-col cols="12" md="5">
+                        <v-col cols="12" md="6">
                             <v-text-field
                                 v-model="state.contactForm.email"
-                                :rules="emailRules"
+                                :rules="emailValidation"
                                 label="Correo electrónico"
                                 required
                             ></v-text-field>
                         </v-col>
-                        <v-col cols="10" class="text-center">
-                            <v-btn type="submit" class="m-10" block color="primary">Enviar</v-btn>
+                        <v-col cols="12" class="text-center">
+                            <v-btn type="submit" class="mx-auto" block color="primary" :loading="state.requestLoading" disabled>Enviar</v-btn>
                         </v-col>
                     </v-row>
                 </v-form>
             </v-col>
+            <v-col cols="5">
+               <img src="@/assets/ilustrations/contact-us.svg" />
+            </v-col>
+        </v-row>
+        <v-row align="center" class="text-center">
             <v-col cols="4">
-                <div class="pb-10">
-                    <h3>Llamanos a los teléfonos:</h3>
-                    <ul class="pl-10">
-                        <li>3854-9522</li>
-                        <li>3853-8973</li>
-                    </ul>
-                </div>
-                <div class="pb-10">
-                    <h3>Visitanos en nuestra dirección:</h3>
-                    <ul class="pl-10">
-                        <li>Jesus García #1276-1, Col. Villaseñor. C.P. 44260. Guadalajara, Jal.</li>
-                    </ul>
-                </div>
-                <div class="pb-10">
-                    <h3>Nuestras redes sociales:</h3>
-                    <div>
-                        <v-icon icon="mdi-facebook" class="px-10" size="x-large"></v-icon>
-                        <v-icon icon="mdi-twitter" class="px-10" size="x-large"></v-icon>
-                    </div>
+                <h3>Llamanos a los teléfonos:</h3>
+                    <span>3854-9522</span><br>
+                    <span>3853-8973</span>
+            </v-col>
+            <v-col cols="4">
+                <h3>Visitanos en nuestra dirección:</h3>
+                <span>Jesus García #1276-1, Col. Villaseñor. C.P. 44260. Guadalajara, Jal.</span>
+            </v-col>
+            <v-col cols="4">
+                <h3>Nuestras redes sociales:</h3>
+                <div>
+                    <v-btn color="primary" href="https://www.facebook.com/profile.php?id=" target="_blank" icon class="mr-4 mt-2">
+                        <v-icon icon="mdi-facebook" size="x-large"></v-icon>
+                    </v-btn>
+                    <v-btn color="blue" href="https://twitter.com" target="_blank" icon class="mr-4 mt-2">
+                        <v-icon icon="mdi-twitter" size="x-large"></v-icon>
+                    </v-btn>
                 </div>
             </v-col>
         </v-row>
@@ -81,6 +86,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
 const state = reactive({
+    requestLoading: false,
     validForm: true,
     contactForm: {
         name: null,
@@ -90,19 +96,21 @@ const state = reactive({
         message: null,
     }
 });
-const requiredRule = [
-    (value: string) => {
+const requiredValidation = (value: string) => {
         if (value) return true
 
-        return 'value es campo obligatorio'
-    },   
-]
-const emailRules = [
-        (value: string) => {
-          if (value) return true
+        return 'Campo obligatorio'
+    };
+const phoneValidation = [
+            requiredValidation,
+            (value:string) => {
+                if (value?.length == 10 && /^[0-9]*$/.test(value)) return true
 
-          return 'El correo es un campo obligatorio'
-        },
+                return 'El teléfono debe ser a 10 digitos'
+              }
+        ]
+const emailValidation = [
+        requiredValidation,
         (value: string) => {
           if (/.+@.+\..+/.test(value)) return true
 
@@ -110,9 +118,11 @@ const emailRules = [
         },
       ];
 
-const submit = async (event: any) => {
+const submitForm = async (event: any) => {
         const results = await event
-        alert('submitted' + JSON.stringify(results, null, 2))
+        if(!results.valid) return;
+        state.requestLoading = true;
+    
     };
 </script>
 <style lang="scss" scoped>
