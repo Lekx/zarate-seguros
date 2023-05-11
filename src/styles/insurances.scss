@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+footer{
+    background-color: $brand-burnt-sienna;
+    color: white;
+    >div{
+        padding:0;    
+    }
+}
+.insurance-logo{
+    img{
+        max-width: 120px;
+        filter: grayscale(50%);
+        &:hover{
+            filter: grayscale(0%);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+.logo-link{
+    color: $brand-burnt-sienna;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.wrs-link{
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: #B69F57;
+    &:hover{
+        color: #AF3800;
+        text-decoration: underline;
+    }
+}
