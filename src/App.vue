@@ -1,20 +1,11 @@
 <template>
-    <v-app>
-        <TheHeader/>
-        <v-content>
-            <router-view></router-view>
-        </v-content>
-        <TheFooter/>
-        <TheInsurances/>
-    </v-app>
+  <v-app>
+    <v-main>
+      <HelloWorld />
+    </v-main>
+  </v-app>
 </template>
 
 <script setup lang="ts">
-import TheHeader from '@/components/TheHeader.vue';
-import TheFooter from '@/components/TheFooter.vue';
-import TheInsurances from '@/components/TheInsurances.vue';
+  import HelloWorld from '@/components/HelloWorld.vue'
 </script>
-
-<style lang="scss">
-@import "@/styles/layout.scss";
-</style>
