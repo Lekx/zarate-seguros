@@ -18,7 +18,6 @@
                     <p>Jesus García #1276-1</p>
                     <p>Col. Villaseñor. C.P. 44260</p>
                     <p>Guadalajara, Jalisco</p>
-                    <!-- <img src="src/assets/aseguradoras/mapfre.jpg"/> -->
                 </v-col>
             </v-row>
         </v-container>
