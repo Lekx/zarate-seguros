@@ -2,9 +2,8 @@
     <div class="home">
         <div class="header">
             <v-row>
-                <v-col>
+                <v-col cols="12" md="6">
                     <div class="cta">
-
                         <h1>ZÁRATE SEGUROS</h1>
                         <p>
                             ¡Asegura tu tranquilidad con nosotros!
@@ -12,7 +11,7 @@
                         <v-btn elevation="4" size="x-large" rounded="xl" color="#E76F51" class="mt-3" to="contacto">¡Contactanos!</v-btn>
                     </div>
                 </v-col>
-                <v-col class="cta-img">
+                <v-col cols="12" md="6" class="cta-img">
                     <img src="@/assets/ilustrations/finance.svg">
                 </v-col>
             </v-row>
@@ -29,10 +28,10 @@
                 </v-col>
             </v-row>
             <v-row align="center">
-                <v-col>
-                    <img src="@/assets/ilustrations/profesionals.svg"/>
+                <v-col cols="12" md="6">
+                    <img src="@/assets/ilustrations/profesionals.svg" class="ilustration"/>
                 </v-col>
-                <v-col>
+                <v-col cols="12" md="6">
                     <h1>Nuestros productos</h1>
                     <v-list-item
                         v-for="(item, i) in products"

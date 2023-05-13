@@ -6,7 +6,7 @@
                     ¡Haznos una pregunta!
                 </h1>
             </v-col>
-            <v-col cols="7">
+            <v-col cols="12" sm="7" class="mx-auto">
                 <v-form v-model="state.validForm" @submit.prevent="submitForm">
                     <v-row>
                         <v-col cols="12">
@@ -49,22 +49,18 @@
                     </v-row>
                 </v-form>
             </v-col>
-            <v-col cols="5">
+            <v-col cols="5" class="d-none d-md-flex">
                <img src="@/assets/ilustrations/contact-us.svg" />
             </v-col>
         </v-row>
         <v-row align="center" class="text-center">
-            <v-col cols="4">
-                <h3>Llamanos a los teléfonos:</h3>
-                    <span>3854-9522</span><br>
-                    <span>3853-8973</span>
+            <v-col cols="6" sm="4">
+                <h3>Teléfonos</h3>
+                    <span>(33) 3854 9522</span><br>
+                    <span>(33) 3853 8973</span>
             </v-col>
-            <v-col cols="4">
-                <h3>Visitanos en nuestra dirección:</h3>
-                <span>Jesus García #1276-1, Col. Villaseñor. C.P. 44260. Guadalajara, Jal.</span>
-            </v-col>
-            <v-col cols="4">
-                <h3>Nuestras redes sociales:</h3>
+            <v-col cols="6" sm="4">
+                <h3>Redes sociales</h3>
                 <div>
                     <v-btn color="primary" href="https://www.facebook.com/profile.php?id=" target="_blank" icon class="mr-4 mt-2">
                         <v-icon icon="mdi-facebook" size="x-large"></v-icon>
@@ -73,6 +69,10 @@
                         <v-icon icon="mdi-twitter" size="x-large"></v-icon>
                     </v-btn>
                 </div>
+            </v-col>
+            <v-col cols="12" sm="4">
+                <h3>Dirección</h3>
+                <span>Jesus García #1276-1, Col. Villaseñor. C.P. 44260. Guadalajara, Jal.</span>
             </v-col>
         </v-row>
         <v-row align="center">

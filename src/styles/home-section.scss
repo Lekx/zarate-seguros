@@ -35,3 +35,29 @@
         }
     }
 }
+
+@media screen and (max-width: 960px){
+    .header{
+        height: auto;
+        .cta{
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+        }
+        .cta-img{
+            text-align:center;
+            height: auto;
+            img{
+                display:block;
+                top:0;
+                left:0;
+                position: relative;
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .header .cta-img img{ width: 80%;}
+}

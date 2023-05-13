@@ -3,13 +3,16 @@
 footer{
     background-color: $brand-burnt-sienna;
     color: white;
+    padding:0;
     >div{
         padding:0;    
     }
 }
 .insurance-logo{
     img{
-        max-width: 120px;
+        max-width: 90px;
+        min-width: 90px;
+        width:100%;
         filter: grayscale(50%);
         &:hover{
             filter: grayscale(0%);
