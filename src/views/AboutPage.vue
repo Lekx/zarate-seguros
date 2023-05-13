@@ -14,10 +14,10 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col>
-                <img src="@/assets/ilustrations/family.svg"/>
+            <v-col cols="12" md="6">
+                <img src="@/assets/ilustrations/family.svg" class="ilustration"/>
             </v-col>
-            <v-col>
+            <v-col cols="12" md="6">
                 <h1>
                     Nuestra Misión
                 </h1>
@@ -27,7 +27,7 @@
             </v-col>
         </v-row>
         <v-row align="center">
-            <v-col>
+            <v-col cols="12" md="6">
                 <h1>Nuestros Valores</h1>
                 <v-list-item active-color="primary">
                     <template v-slot:prepend>
@@ -60,8 +60,8 @@
                     <v-list-item-title v-text="'Eficiencia'"></v-list-item-title>
                 </v-list-item>
             </v-col>
-            <v-col>
-                <img src="@/assets/ilustrations/about-us.svg"/>
+            <v-col cols="12" md="6">
+                <img src="@/assets/ilustrations/about-us.svg" class="ilustration"/>
             </v-col>
         </v-row>
     </div>   

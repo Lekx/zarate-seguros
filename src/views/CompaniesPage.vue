@@ -11,7 +11,7 @@
             </v-col>
         </v-row>
         <v-row align="center">
-            <v-col>
+            <v-col cols="12" md="6">
                 <h1>Seguros para tu negocio</h1>
                 <v-list-item active-color="primary" v-for="(item, index) in insurances.business" :key="index">
                     <template v-slot:prepend>
@@ -20,15 +20,15 @@
                     <v-list-item-title v-text="item.text"></v-list-item-title>
                 </v-list-item>
             </v-col>
-            <v-col>
-                <img src="@/assets/ilustrations/business.svg"/>
+            <v-col cols="12" md="6">
+                <img src="@/assets/ilustrations/business.svg" class="ilustration"/>
             </v-col>
         </v-row>
         <v-row align="center">
-            <v-col>
-                <img src="@/assets/ilustrations/employees.svg"/>
+            <v-col cols="12" md="6" order="1" order-md="0">
+                <img src="@/assets/ilustrations/employees.svg" class="ilustration"/>
             </v-col>
-            <v-col>
+            <v-col cols="12" md="6" order="0" order-md="1">
                 <h1>Seguros para tus empleados</h1>
                 <v-list-item active-color="primary" v-for="(item, index) in insurances.employees" :key="index">
                     <template v-slot:prepend>
