@@ -64,5 +64,4 @@ const navigateTo = (pathUrl: string) => {
 
 </script>
 <style lang="scss" scoped>
-  @import "@/styles/header.scss";
 </style>
